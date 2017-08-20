@@ -1,6 +1,12 @@
 <h2>Login</h2>
 <form [formGroup]="loginForm">
-  <input formControlName="username" placeholder="Login" />
-  <input formControlName="password" placeholder="Password" type="password" />
-  <button type="Submit" (click)="save()">Submit</button>
+  <input formControlName="username" id="username" #username placeholder="Login" /><br />
+  <!--<div [hidden]="username.valid">User name is required</div>-->
+  <app-error-message [control]="loginForm.controls.username"></app-error-message>
+
+  <input formControlName="password" id="password" #password placeholder="Password" type="password" />
+  <!--<div [hidden]="password.valid">Password is required</div>-->
+  <app-error-message [control]="loginForm.controls.password"></app-error-message><br />
+
+  <button type="Submit" [disabled]='!loginForm.valid' (click)="save()">Submit</button>
 </form>
