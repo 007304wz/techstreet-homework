@@ -27,6 +27,6 @@ export class LoginComponent implements OnInit {
   }
   save() {
     this._service.setDirective(2);
-    this._login.login();
+    this._login.login(this.loginForm.value.username, this.loginForm.value.password);
   }
 }

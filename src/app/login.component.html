@@ -1,6 +1,6 @@
 <h2>Login</h2>
-<form>
-  <input placeholder="Login" />
-  <input placeholder="Password" type="password" />
+<form [formGroup]="loginForm">
+  <input formControlName="username" placeholder="Login" />
+  <input formControlName="password" placeholder="Password" type="password" />
   <button type="Submit" (click)="save()">Submit</button>
 </form>
