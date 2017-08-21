@@ -7,7 +7,7 @@ export class Piped implements PipeTransform {
     var currentUser = currentUserString && JSON.parse(currentUserString);
     var username = currentUser && currentUser['username'];
     var piped;
-    switch(value) {
+    switch (value) {
       case 0:
         piped = 'We need to be able to log in to the app.  Add the login component to this template.  '
           + 'You\'ll find the component at /src/app/login.component.ts';
@@ -22,12 +22,12 @@ export class Piped implements PipeTransform {
           + 'which is located at /src/app/login.service.ts';
         break;
       case 3:
-        piped = 'You are currently logged in as ' +username+ ' which was hard-coded. '
+        piped = 'You are currently logged in as ' + username + ' which was hard-coded. '
           + 'Change the template to use Angular forms and submit the name "Techstreet" and password "homework" '
           + 'to the login service.';
         break;
       case 4:
-        piped = 'You are now logged in as ' +username+ '. '
+        piped = 'You are now logged in as ' + username + '. '
           + 'Change the form template so that the input fields are validated before submission. '
           + 'We want both fields to be required, with an error message displayed if validation fails.'
         break;
