@@ -1,12 +1,13 @@
-<h2>Login</h2>
-<form [formGroup]="loginForm">
-  <input formControlName="username" id="username" #username placeholder="Login" /><br />
-  <!--<div [hidden]="username.valid">User name is required</div>-->
-  <app-error-message [control]="loginForm.controls.username"></app-error-message>
-
-  <input formControlName="password" id="password" #password placeholder="Password" type="password" />
-  <!--<div [hidden]="password.valid">Password is required</div>-->
-  <app-error-message [control]="loginForm.controls.password"></app-error-message><br />
-
-  <button type="Submit" [disabled]='!loginForm.valid' (click)="save()">Submit</button>
-</form>
+<div class="wrapper login">
+  <form [formGroup]="loginForm">
+    <h2>Login</h2>
+    <input type='text' formControlName="username" class="form-control" id="username"
+           #username placeholder="Login" />
+    <app-error-message [control]="loginForm.controls.username"></app-error-message>
+    <input type='password' formControlName="password" class="form-control" id="password"
+           #password placeholder="Password" />
+    <app-error-message [control]="loginForm.controls.password"></app-error-message>
+    <button type="Submit" class="btn btn-primary" [disabled]='!loginForm.valid'
+            (click)="save()">Submit</button>
+  </form>
+</div>
