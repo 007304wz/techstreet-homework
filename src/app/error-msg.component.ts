@@ -3,7 +3,7 @@ import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-error-message',
-  template: `<div *ngIf="errorMessage !== null" style="color:red">{{errorMessage}}</div>`
+  template: `<div *ngIf="errorMessage !== null" style="color:red; margin-bottom:20px">{{errorMessage}}</div>`
 })
 export class ErrorMessagesComponent {
   @Input() control: FormControl;
